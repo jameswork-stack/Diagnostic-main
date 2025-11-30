@@ -1,0 +1,170 @@
+.services-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.service-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.service-form input,
+.service-form textarea {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 100%;
+  min-width: 100%;
+}
+
+.service-form button {
+  padding: 12px;
+  border: none;
+  background: #2d7df4;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 200px;
+  margin: 5px 0;
+}
+
+.service-form button:hover {
+  background: #1a5bbf;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.service-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.available {
+  border-left: 6px solid #29cc60;
+}
+
+.not-available {
+  border-left: 6px solid #f23a3a;
+}
+
+.status .green {
+  color: #29cc60;
+}
+
+.status .red {
+  color: #f23a3a;
+}
+
+.service-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 15px;
+}
+
+.service-actions button {
+  flex: 1;
+  min-width: 120px;
+  padding: 10px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.service-actions button:not(.delete-btn) {
+  background: #2d7df4;
+  color: white;
+}
+
+.service-actions button:not(.delete-btn):hover {
+  background: #1a5bbf;
+}
+
+.delete-btn {
+  background: #ff4d4f;
+  color: white;
+  flex: 1;
+}
+
+.delete-btn:hover {
+  background: #d9363e;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .services-container {
+    padding: 15px;
+  }
+  
+  .service-form {
+    padding: 15px;
+  }
+  
+  .service-form button {
+    max-width: 100%;
+  }
+  
+  .service-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .service-actions button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-container {
+    padding: 10px;
+  }
+  
+  .service-card {
+    padding: 15px;
+  }
+  
+  .service-form input,
+  .service-form textarea,
+  .service-form button {
+    padding: 10px;
+    font-size: 15px;
+  }
+}
